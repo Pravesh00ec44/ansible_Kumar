@@ -1,0 +1,31 @@
+---
+- name: Add a new IP address to Linux server
+  hosts: all
+  become: true
+  vars:
+    interface_name: eth0
+    new_ip: 192.168.1.100
+    netmask: 255.255.255.0
+    cidr: 24
+
+  tasks:
+
+    - name: Add secondary IP address using `nmcli` (NetworkManager)
+      command: >
+        nmcli connection modify {{ interface_name }}
+        +ipv4.addresses {{ new_ip }}/{{ cidr }}
+      register: nmcli_modify
+
+    - name: Bring connection down and up (to apply change)
+      when: nmcli_modify is changed
+      block:
+        - name: Bring connection down
+          command: nmcli connection down {{ interface_name }}
+        
+        - name: Bring connection up
+          command: nmcli connection up {{ interface_name }}
+
+    - name: Ensure IP address persists after reboot
+      debug:
+        msg: "IP address {{ new_ip }} added to {{ interface_name }} and made persistent."
+
