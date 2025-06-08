@@ -1,0 +1,13 @@
+---
+
+- name: install tmux in rhel9
+  hosts: all
+  become: true
+  gather_facts: true
+
+
+  tasks:
+    - name: install tmux in all systems
+      dnf:
+        name: tmux
+        state: present
