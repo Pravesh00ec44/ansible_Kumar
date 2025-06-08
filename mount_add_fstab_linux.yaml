@@ -5,16 +5,16 @@
   tasks:
     - name: Ensure mount point directory exists
       file:
-        path: /mnt/data
+        path: /mnt
         state: directory
         owner: root
         group: root
         mode: '0755'
 
-    - name: Add fstab entry for /mnt/data
+    - name: Add fstab entry for /mnt
       lineinfile:
         path: /etc/fstab
-        line: "/dev/sdb1  /mnt/data  ext4  defaults  0  2"
+        line: "/dev/sr0  /mnt  iso9660  loop,rw    0 0"
         state: present
         insertafter: EOF
         create: yes
@@ -22,9 +22,8 @@
 
     - name: Mount the filesystem
       mount:
-        path: /mnt/data
-        src: /dev/sdb1
-        fstype: ext4
-        opts: defaults
+        path: /mnt
+        src: /dev/sr0
+        fstype: iso9660
         state: mounted
-
+        opts: rw,loop
