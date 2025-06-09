@@ -1,0 +1,8 @@
+Filesystem             Size  Used Avail Use% Mounted on
+devtmpfs               4.0M     0  4.0M   0% /dev
+tmpfs                  385M     0  385M   0% /dev/shm
+tmpfs                  154M  3.7M  151M   3% /run
+/dev/mapper/rhel-root   17G  4.5G   13G  27% /
+/dev/sda1              960M  304M  657M  32% /boot
+tmpfs                   77M   52K   77M   1% /run/user/42
+tmpfs                   77M   36K   77M   1% /run/user/0

@@ -1,0 +1,10 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+gdm         1194  0.3 25.8 3880300 203676 tty1   Sl+  18:30   0:06 /usr/bin/gnome-shell
+gdm         1694  0.0  6.8 578732 54324 tty1     Sl   18:30   0:00 /usr/libexec/ibus-x11 --kill-daemon
+gdm         1378  0.0  5.0 166844 39612 tty1     S+   18:30   0:00 /usr/bin/Xwayland :1024 -rootless -noreset -accessx -core -auth /run/user/42/.mutter-Xwaylandauth.WXSW72 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7
+gdm         1673  0.0  3.5 2730896 28116 tty1    Sl+  18:30   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+gdm         1458  0.0  3.4 813608 27380 tty1     Sl+  18:30   0:00 /usr/libexec/gsd-color
+gdm         1467  0.0  3.3 735256 26452 tty1     Sl+  18:30   0:00 /usr/libexec/gsd-media-keys
+gdm         1486  0.0  3.3 739236 26344 tty1     Sl+  18:30   0:00 /usr/libexec/gsd-power
+gdm         1454  0.0  3.0 590784 24196 tty1     Sl+  18:30   0:00 /usr/libexec/gsd-wacom
+root        3125 38.0  2.9 247296 23452 pts/0    S+   19:05   0:00 /usr/bin/python3 /root/.ansible/tmp/ansible-tmp-1749389757.306304-35034-112107166925546/AnsiballZ_command.py
