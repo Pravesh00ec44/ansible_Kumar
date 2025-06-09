@@ -7,7 +7,7 @@
 
 
   tasks:
-    - name: install tmux in all systems
+    - name: install tmux db systems
       dnf:
         name: tmux
         state: present
