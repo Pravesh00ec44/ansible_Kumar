@@ -1,0 +1,10 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+gdm         1090  0.5 24.0 3880528 189408 tty1   Sl+  18:54   0:03 /usr/bin/gnome-shell
+gdm         1880  0.0  7.0 578716 55240 tty1     Sl   18:55   0:00 /usr/libexec/ibus-x11 --kill-daemon
+gdm         1492  0.0  5.1 166836 40668 tty1     S+   18:54   0:00 /usr/bin/Xwayland :1024 -rootless -noreset -accessx -core -auth /run/user/42/.mutter-Xwaylandauth.5BCV72 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7
+gdm         1683  0.0  3.8 739360 30312 tty1     Sl+  18:55   0:00 /usr/libexec/gsd-power
+gdm         1659  0.0  3.8 666140 30068 tty1     Sl+  18:55   0:00 /usr/libexec/gsd-color
+gdm         1655  0.0  3.7 590876 29324 tty1     Sl+  18:55   0:00 /usr/libexec/gsd-wacom
+gdm         1671  0.0  3.6 661544 29068 tty1     Sl+  18:55   0:00 /usr/libexec/gsd-media-keys
+gdm         1663  0.0  3.4 663980 27032 tty1     Sl+  18:55   0:00 /usr/libexec/gsd-keyboard
+gdm         1874  0.0  3.3 2730896 26228 tty1    Sl+  18:55   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
