@@ -1,7 +1,7 @@
 ---
 
 - name: install tmux in rhel9
-  hosts: all
+  hosts: db
   become: true
   gather_facts: true
 
