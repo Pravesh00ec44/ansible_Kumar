@@ -10,4 +10,4 @@
     - name: install tmux db systems
       dnf:
         name: tmux
-        state: present
+        state: absent
