@@ -1,13 +1,23 @@
 ---
-
-- name: install tmux in rhel9
+- name: Install and configure Apache 
   hosts: all
-  become: true
-  gather_facts: true
-
-
+  become: yes 
   tasks:
-    - name: install tmux db systems
-      dnf:
-        name: tmux
-        state: absent
+    - name: Install the latest version of httpd
+      ansible.builtin.dnf:
+        name: httpd
+        state: latest
+
+    - name: Ensure httpd is started and enabled on boot
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Allow HTTP traffic through firewalld
+      ansible.posix.firewalld:
+        service: http
+        permanent: yes
+        state: enabled
+        immediate: yes
+
