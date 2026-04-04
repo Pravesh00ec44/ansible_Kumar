@@ -1,0 +1,9 @@
+---
+- name: Hello World Playbook
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Say Hello
+      ansible.builtin.debug:
+        msg: "Hello from Ansible22"
+
